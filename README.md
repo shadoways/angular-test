@@ -1,5 +1,7 @@
 # AleloTestApp
 
+url principal : localhost:4200/home
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
 ## Development server
