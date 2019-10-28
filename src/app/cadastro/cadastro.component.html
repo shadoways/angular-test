@@ -1,0 +1,47 @@
+<div class="row">
+        <div class="col">
+            <h2>{{estabelecimento.razaoSocial}}</h2>
+            <hr>
+        </div>
+    </div>
+    
+    <form #estabForm="ngForm" (ngSubmit)="estabForm.form.valid && onClickSubmit()">    
+        <div class="form-group row">
+            <label for="razaoSocial" class="col-sm-2 col-form-label">Razao Social</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="razaoSocial"  [(ngModel)]="model.razaoSocial" #razaoSocial="ngModel" [ngClass]="{ 'is-invalid': estabForm.submitted && razaoSocial.invalid }"  required/>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="endereco" class="col-sm-2 col-form-label">Endereco</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="endereco" [(ngModel)]="model.endereco" #endereco="ngModel" [ngClass]="{ 'is-invalid': estabForm.submitted && endereco.invalid }"  required/>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="cozinha" class="col-sm-2 col-form-label">Cozinha</label>
+            <div class="col-sm-4">  
+                <input class="form-control" type="text" name="cozinha" [(ngModel)]="model.cozinha" #cozinha="ngModel" [ngClass]="{ 'is-invalid': estabForm.submitted && cozinha.invalid }"  required/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+                <label for="cozinha" class="col-sm-2 col-form-label">Avaliação</label>
+                <div class="col-sm-4">  
+                    <input class="form-control" type="text" name="avaliacao" [(ngModel)]="model.avaliacao" #avaliacao="ngModel" [ngClass]="{ 'is-invalid': estabForm.submitted && avaliacao.invalid }"  required/>
+                </div>
+            </div>
+    
+        <div class="form-group row">
+            <label for="dataCadastro" class="col-sm-2 col-form-label">Data do cadastro</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="dtCadastro"  [(ngModel)]="model.dtCadastro" #dtCadastro="ngModel" [ngClass]="{ 'is-invalid': estabForm.submitted && dtCadastro.invalid }"  required/>
+            </div>
+        </div>
+    
+        <div class="text-center">
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </div>
+    </form>

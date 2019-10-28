@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col">
+        <h2>Lista de estabelecimentos:</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Razao social</th>
+                    <th>Endereco</th>
+                    <th>Cozinha</th>
+                    <th>Avaliacao</th>
+                    <th>Data cadastro</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let estabelecimento of Estabelecimento">
+                    <td>{{estabelecimento.id}}</td>
+                    <td>{{estabelecimento.razaoSocial}}</td>
+                    <td>{{estabelecimento.endereco}}</td>
+                    <td>{{estabelecimento.cozinha}}</td>
+                    <td>{{estabelecimento.avaliacao}}</td>
+                    <td>{{estabelecimento.dtCadastro}}</td>
+                    <td><a href="/edit/{{estabelecimento.id}}">Editar</a></td>
+                    <td><a href="/delete/{{estabelecimento.id}}">Excluir</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>     

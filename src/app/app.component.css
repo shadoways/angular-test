@@ -1,0 +1,17 @@
+.toolbar{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    background-color: #90b02d;
+    color: white;
+}
+
+.logo{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+a {
+    color: white;
+  }
